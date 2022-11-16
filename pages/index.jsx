@@ -59,7 +59,7 @@ function Title() {
 function Text() {
   return (
     <div style={{color:'white', textAlign:'center'}}>
-      <h4>v0.1 Work in Progress</h4>
+      <h4>v0.1 <del>Work in Progress</del></h4>
       <h4>Part 1/2: Modifiable Geometry (could be parametrically generated with 2/2)</h4>
       <h4>Part 2/2: (Relational) UML Diagram</h4>
     </div>
