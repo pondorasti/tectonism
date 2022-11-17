@@ -4,10 +4,10 @@ import { PivotControls, RoundedBox, PresentationControls } from "@react-three/dr
 import { useControls } from "leva"
 import { useLoader } from "@react-three/fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from "next/head"
+import Image from "next/image"
 
-import uml_diagram from '../public/uml_study.png'
+import uml_diagram from "../public/uml_study.png"
 
 function Box() {
   const {
@@ -50,7 +50,7 @@ function Box() {
 function Title() {
   const title = "Tectonism Web App [Demo]"
   return (
-    <div style={{backgroundColor:'black', color:'white', textAlign:'center', paddingTop: '5vh'}}>
+    <div style={{backgroundColor:"black", color: "white", textAlign:"center", paddingTop: "5vh"}}>
       <h1>{title}</h1>
     </div>
   )
@@ -58,7 +58,7 @@ function Title() {
 
 function Text() {
   return (
-    <div style={{color:'white', textAlign:'center'}}>
+    <div style={{color:"white", textAlign:"center"}}>
       <h4>v0.1 <del>Work in Progress</del></h4>
       <h4>Part 1/2: Modifiable Geometry (could be parametrically generated with 2/2)</h4>
       <h4>Part 2/2: (Relational) UML Diagram</h4>
@@ -95,8 +95,8 @@ export default function App() {
         </PresentationControls>
       </Canvas>
       
-      <div style ={{ width: '90vw', height: '90vh', position: 'relative', margin: '0 auto', paddingBottom: '10vh'}}>
-        <Image src={uml_diagram} alt="uml-diagram" layout='fill'/>
+      <div style ={{ width: "90vw", height: "90vh", position: "relative", margin: "0 auto", paddingBottom: "10vh"}}>
+        <Image src={uml_diagram} alt="uml-diagram" layout="fill"/>
       </div>
       <br />
       <br />
