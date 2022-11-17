@@ -9,8 +9,6 @@ import Image from "next/image"
 
 import uml_diagram from "../public/uml_study.png"
 
-//
-
 function Box() {
   const {
     width,
@@ -32,27 +30,27 @@ function Box() {
   // useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
 
   return (
-    <PivotControls disableSliders>
-      <RoundedBox
-        ref={mesh}
-        args={[height, width, thickness]}
-        radius={radius}
-        rotation={[-0.5, 1, -1]}
-        scale={1}
-        onClick={(event) => setActive(!active)}
-        onPointerOver={(event) => setHover(true)}
-        onPointerOut={(event) => setHover(false)}
-      >
-        <meshStandardMaterial color={color} />
-      </RoundedBox>
-    </PivotControls>
+      <PivotControls disableSliders>
+        <RoundedBox
+          ref={mesh}
+          args={[height, width, thickness]}
+          radius={radius}
+          rotation={[-0.5, 1, -1]}
+          scale={1}
+          onClick={(event) => setActive(!active)}
+          onPointerOver={(event) => setHover(true)}
+          onPointerOut={(event) => setHover(false)}
+        >
+          <meshStandardMaterial color={color} />
+        </RoundedBox>
+      </PivotControls>
   )
 }
 
 function Title() {
   const title = "Tectonism Web App [Demo]"
   return (
-    <div style={{ backgroundColor: "black", color: "white", textAlign: "center" }}>
+    <div style={{backgroundColor:"black", color: "white", textAlign:"center", paddingTop: "5vh"}}>
       <h1>{title}</h1>
     </div>
   )
@@ -60,8 +58,8 @@ function Title() {
 
 function Text() {
   return (
-    <div style={{ color: "white", textAlign: "center" }}>
-      <h4>v0.1 Work in Progress</h4>
+    <div style={{color: "white", textAlign:"center"}}>
+      <h4>v0.1 <del>Work in Progress</del></h4>
       <h4>Part 1/2: Modifiable Geometry (could be parametrically generated with 2/2)</h4>
       <h4>Part 2/2: (Relational) UML Diagram</h4>
     </div>
@@ -80,14 +78,13 @@ function House() {
 
 export default function App() {
   return (
-    <div>
+    <div style={{ backgroundColor: "black"}}>
       <Head>
         <meta name="robots" content="noindex" />
         <title>secret-projects</title>
       </Head>
       <Title />
       <Text />
-
       <Canvas style={{ height: "80vh" }}>
         <color attach="background" args={["#171717"]} />
         <ambientLight />
@@ -96,20 +93,13 @@ export default function App() {
           <Box />
           {/* <House /> */}
         </PresentationControls>
-      </Canvas>
-
-      <div
-        style={{
-          width: "50vw",
-          height: "50vh",
-          position: "relative",
-          margin: "0 auto",
-          marginTop: "-10vh",
-          marginBottom: "5vh",
-        }}
-      >
-        <Image src={uml_diagram} alt="uml-diagram" layout="fill" />
+      </Canvas>      
+      <div style ={{ width: "90vw", height: "90vh", position: "relative", margin: "0 auto", paddingBottom: "10vh"}}>
+        <Image src={uml_diagram} alt="uml-diagram" layout="fill"/>
       </div>
+      <br />
+      <br />
+      <br />
     </div>
   )
 }
