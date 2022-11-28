@@ -48,7 +48,7 @@ function Box() {
 }
 
 function Title() {
-  const title = "Tectonism Web App [Demo]"
+  const title = "Tectonism Web App [Three.js Demo]"
   return (
     <div style={{backgroundColor:"black", color: "white", textAlign:"center", paddingTop: "5vh"}}>
       <h1>{title}</h1>
@@ -58,10 +58,10 @@ function Title() {
 
 function Text() {
   return (
-    <div style={{color: "white", textAlign:"center"}}>
-      <h4>v0.1 <del>Work in Progress</del></h4>
-      <h4>Part 1/2: Modifiable Geometry (could be parametrically generated with 2/2)</h4>
-      <h4>Part 2/2: (Relational) UML Diagram</h4>
+    <div style={{color:"white", textAlign:"center"}}>
+      <h4>v0.1 Work in Progress</h4>
+      <h4>Part 1: Modifiable Geometry (could be parametrically generated)</h4>
+      {/* <h4>Part 2/2: (Relational) UML Diagram</h4> */}
     </div>
   )
 }
@@ -91,15 +91,12 @@ export default function App() {
         <pointLight position={[10, 10, 10]} />
         <PresentationControls>
           <Box />
-          {/* <House /> */}
+          {/* <House />   */}
         </PresentationControls>
-      </Canvas>      
-      <div style ={{ width: "90vw", height: "90vh", position: "relative", margin: "0 auto", paddingBottom: "10vh"}}>
+      </Canvas>
+      {/* <div style ={{ width: "90vw", height: "90vh", position: "relative", margin: "0 auto", paddingBottom: "10vh"}}>
         <Image src={uml_diagram} alt="uml-diagram" layout="fill"/>
-      </div>
-      <br />
-      <br />
-      <br />
+      </div> */}
     </div>
   )
 }
